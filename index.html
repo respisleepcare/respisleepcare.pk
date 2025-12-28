@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="w3n8MYWDUTqiGdQ5ErpJlYsBPt4rgqMHxsIje-7b5Sk" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- UPDATED: Local SEO Title -->
     <title>Sleep Test &amp; EEG Center in Rawalpindi - Respisleep Care &amp; Neuro EEG</title>
-    
-    <!-- UPDATED: Local SEO Description -->
     <meta name="description" content="Expert PSG Sleep Study, EEG, Spirometry, and CPAP Therapy in Rawalpindi, Pakistan. Located at Future Medical Complex, Saddar Cantt. 24/7 Home &amp; Clinic Services available. Book your appointment today.">
-    <meta name="keywords" content="Sleep Test Rawalpindi, EEG Test Rawalpindi, PSG Sleep Study Pakistan, CPAP BiPAP Services Pakistan, Respiration Care, Neuro EEG, Pulmonologist Rawalpindi">
+    <meta name="keywords" content="Sleep Test Rawalpindi, EEG Test Rawalpindi, PSG Sleep Study Pakistan, CPAP BiPAP Services Pakistan, Respiration Care, Neuro EEG">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +15,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- UPDATED: Medical Schema (JSON-LD) -->
+    <!-- Medical Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -47,15 +42,7 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
           "opens": "00:00",
           "closes": "23:59"
         }
@@ -66,25 +53,20 @@
 
     <style>
         :root {
-            /* Premium Palette - Calming & Modern */
             --bg-dark: #050a14;
             --bg-gradient-1: #0f2027;
             --bg-gradient-2: #203a43;
             --bg-gradient-3: #2c5364;
-            
-            /* Gold Accents - Refined */
             --gold-base: #D4AF37;
             --gold-light: #FDFEFE;
             --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
             --gold-text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
-            
-            /* Glassmorphism - Softer & Cleaner */
-            --glass-bg: rgba(255, 255, 255, 0.03); /* Very light tint */
-            --glass-border: rgba(212, 175, 55, 0.2); /* Subtle gold border */
-            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Softer shadow */
-            
-            /* Backdrop for Menu */
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(212, 175, 55, 0.2);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
             --backdrop-bg: rgba(0, 5, 10, 0.85);
+            --btn-green: #25D366;
+            --btn-blue: #0078d7;
         }
 
         * {
@@ -100,9 +82,8 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            color: #e0e0e0; /* Softer white for better reading on dark */
+            color: #e0e0e0;
             background-color: var(--bg-dark);
-            /* Calming Deep Blue/Teal Gradient */
             background-image: 
                 radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 40%), 
                 radial-gradient(circle at 90% 80%, rgba(0, 50, 80, 0.15) 0%, transparent 40%),
@@ -112,7 +93,6 @@
             line-height: 1.6;
         }
 
-        /* --- Top Bar --- */
         .top-bar {
             background: var(--gold-gradient);
             background-size: 200% auto;
@@ -125,7 +105,6 @@
             border-bottom: 1px solid rgba(0,0,0,0.2);
         }
 
-        /* UPDATED: Styling H2 in Top Bar instead of span */
         .top-bar h2 {
             color: #1a1a1a;
             font-family: 'Cinzel', serif;
@@ -137,7 +116,6 @@
             line-height: normal;
         }
 
-        /* Typography */
         h1, h2, h3, h4 {
             font-family: 'Cinzel', serif;
             letter-spacing: 0.5px;
@@ -154,11 +132,8 @@
             display: inline-block;
         }
 
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
+        @keyframes shine { to { background-position: 200% center; } }
 
-        /* Glassmorphism */
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(14px);
@@ -179,9 +154,8 @@
             background: rgba(255, 255, 255, 0.06);
         }
 
-        /* --- Header & Logo --- */
         .header {
-            position: relative; /* Static, scrolls away */
+            position: relative;
             top: auto;
             left: 0;
             width: 100%;
@@ -190,8 +164,8 @@
             display: flex;
             justify-content: space-between; 
             align-items: center;
-            background: rgba(10, 20, 35, 0.85); /* Slightly lighter dark */
-            backdrop-filter: blur(20px); /* Stronger blur for readability */
+            background: rgba(10, 20, 35, 0.85);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             height: 80px;
@@ -232,24 +206,20 @@
             box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
         }
 
-        /* --- Menu Backdrop (New) --- */
         .menu-backdrop {
             position: fixed;
             inset: 0;
             width: 100%;
             height: 100%;
             background: var(--backdrop-bg);
-            backdrop-filter: blur(8px); /* Blurs content behind menu */
-            z-index: 990; /* Just below menu */
+            backdrop-filter: blur(8px);
+            z-index: 990;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.4s ease-in-out;
         }
 
-        .menu-backdrop.active {
-            opacity: 1;
-            pointer-events: auto; /* Allow clicking to close */
-        }
+        .menu-backdrop.active { opacity: 1; pointer-events: auto; }
 
         .slide-menu {
             position: fixed;
@@ -258,7 +228,7 @@
             height: 100vh;
             width: 300px;
             background: linear-gradient(180deg, #0f2027, #000000);
-            z-index: 1001; /* Above backdrop */
+            z-index: 1001;
             transform: translateX(-100%);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
@@ -268,9 +238,7 @@
             box-shadow: 5px 0 30px rgba(0,0,0,0.5);
         }
 
-        .slide-menu.active {
-            transform: translateX(0);
-        }
+        .slide-menu.active { transform: translateX(0); }
 
         .slide-menu ul {
             list-style: none;
@@ -300,7 +268,6 @@
             opacity: 1;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -312,10 +279,7 @@
             overflow: hidden;
         }
 
-        .hero-content {
-            max-width: 900px;
-            z-index: 2;
-        }
+        .hero-content { max-width: 900px; z-index: 2; }
 
         .hero h1 {
             font-size: 4rem;
@@ -413,15 +377,9 @@
             letter-spacing: 1px;
         }
         
-        .trust-item i {
-            color: var(--gold-base);
-            font-size: 1rem;
-        }
+        .trust-item i { color: var(--gold-base); font-size: 1rem; }
 
-        section {
-            padding: 7rem 2rem;
-            position: relative;
-        }
+        section { padding: 7rem 2rem; position: relative; }
 
         .section-header {
             text-align: center;
@@ -456,40 +414,69 @@
             letter-spacing: 0.3px;
         }
 
-        /* About Section with Logo */
+        /* --- UPDATED ABOUT SECTION LAYOUT --- */
         .about-grid {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex; /* Changed to Flexbox for layout control */
+            flex-direction: row; /* Default: Row */
             gap: 3rem;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+            align-items: center; /* Vertical center */
+            justify-content: space-between; /* Push image to right */
+        }
+
+        .about-content {
+            flex: 1; /* Take up available space */
         }
 
         .about-logo-container {
+            flex: 0 0 auto; /* Do not grow, keep natural size */
+            width: 45%; /* Proportion of space */
             text-align: center;
             margin-bottom: 2rem;
             padding: 2rem;
             background: rgba(255,255,255,0.03);
             border-radius: 20px;
             border: 1px solid rgba(255,255,255,0.05);
+            /* Natural look */
+            transition: transform 0.3s ease;
         }
 
         .about-logo-container img {
-            max-height: 120px;
+            max-height: 140px; /* Slightly larger for desktop prominence */
             cursor: pointer;
-            transition: transform 0.3s ease;
-            filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));
+            object-fit: contain;
+            /* Removed heavy filters per instructions */
         }
 
         .about-logo-container img:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0 0 20px var(--gold-base));
+            transform: scale(1.02);
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));
         }
 
-        /* Services */
-        #services {
-            text-align: center; 
+        /* Mobile Override for About Us */
+        @media (max-width: 768px) {
+            .about-grid {
+                flex-direction: column; /* Stack on mobile: Text Top, Image Bottom */
+            }
+            .about-logo-container {
+                width: 100%; /* Full width image container */
+                margin-top: 2rem;
+            }
+            .about-logo-container img {
+                max-height: 200px; /* Bigger on mobile */
+            }
+            .hero h1 { font-size: 2.5rem; }
+            .section-header h2 { font-size: 2.2rem; }
+            .header { padding: 1rem; top: auto; }
+            .top-bar h2 { font-size: 0.7rem; }
+            .slide-menu { width: 280px; }
+            .glass-card { padding: 2rem; }
         }
+
+        /* --- END ABOUT SECTION LAYOUT --- */
+
+        #services { text-align: center; } 
 
         .services-badge {
             display: inline-block;
@@ -531,11 +518,8 @@
             margin-right: auto;
         }
         
-        .service-icon-wrapper i {
-            color: var(--gold-base);
-        }
+        .service-icon-wrapper i { color: var(--gold-base); }
 
-        /* Health Info */
         .health-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -544,17 +528,12 @@
             margin: 0 auto;
         }
 
-        .issue-card {
-            border-left: 3px solid #e74c3c;
-        }
+        .issue-card { border-left: 3px solid #e74c3c; }
         .issue-card h3 { color: #e74c3c; margin-bottom: 1rem; font-size: 1.4rem; }
         
-        .solution-card {
-            border-left: 3px solid var(--gold-base);
-        }
+        .solution-card { border-left: 3px solid var(--gold-base); }
         .solution-card h3 { color: var(--gold-base); margin-bottom: 1rem; font-size: 1.4rem; }
 
-        /* Why Choose Us */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -563,9 +542,7 @@
             margin: 0 auto;
         }
         
-        .feature-card {
-            text-align: center;
-        }
+        .feature-card { text-align: center; }
         
         .feature-icon {
             font-size: 2.2rem;
@@ -576,7 +553,6 @@
             filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));
         }
 
-        /* Booking Form */
         .booking-container {
             max-width: 600px;
             margin: 0 auto;
@@ -584,10 +560,7 @@
             padding-top: 2rem;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
+        .form-group { margin-bottom: 1.5rem; position: relative; }
 
         .form-control {
             width: 100%;
@@ -610,12 +583,7 @@
         
         .form-control::placeholder { color: #888; }
 
-        /* --- Contact & Social Media --- */
-        .contact-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
+        .contact-wrapper { max-width: 800px; margin: 0 auto; text-align: center; }
 
         .address-box {
             background: rgba(255,255,255,0.03);
@@ -661,7 +629,6 @@
             transform: translateY(-2px);
         }
 
-        /* Prominent Social Buttons */
         .social-buttons-container {
             margin-top: 3rem;
             display: flex;
@@ -684,15 +651,8 @@
             border: 2px solid rgba(255,255,255,0.15);
         }
 
-        .social-btn.instagram {
-            color: #E1306C;
-            border-color: rgba(225, 48, 108, 0.5);
-        }
-
-        .social-btn.facebook {
-            color: #4267B2;
-            border-color: rgba(66, 103, 178, 0.5);
-        }
+        .social-btn.instagram { color: #E1306C; border-color: rgba(225, 48, 108, 0.5); }
+        .social-btn.facebook { color: #4267B2; border-color: rgba(66, 103, 178, 0.5); }
 
         .social-btn:hover {
             transform: scale(1.15);
@@ -700,19 +660,9 @@
             background: rgba(255,255,255,0.1);
         }
         
-        .social-btn.instagram:hover {
-            background: #E1306C;
-            color: #fff;
-            box-shadow: 0 15px 30px rgba(225, 48, 108, 0.4);
-        }
-        
-        .social-btn.facebook:hover {
-            background: #4267B2;
-            color: #fff;
-            box-shadow: 0 15px 30px rgba(66, 103, 178, 0.4);
-        }
+        .social-btn.instagram:hover { background: #E1306C; color: #fff; box-shadow: 0 15px 30px rgba(225, 48, 108, 0.4); }
+        .social-btn.facebook:hover { background: #4267B2; color: #fff; box-shadow: 0 15px 30px rgba(66, 103, 178, 0.4); }
 
-        /* --- Modals --- */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -746,23 +696,9 @@
         }
 
         .modal-overlay.active .modal-content { transform: scale(1); }
-
-        .modal-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-            margin-top: 2.5rem;
-        }
+        .modal-actions { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2.5rem; }
         
-        /* Logo specific modal content */
-        .logo-modal-content {
-            background: transparent;
-            border: none;
-            box-shadow: none;
-            padding: 0;
-            max-width: 800px;
-        }
-        
+        .logo-modal-content { background: transparent; border: none; box-shadow: none; padding: 0; max-width: 800px; }
         .logo-modal-content img {
             max-width: 100%;
             max-height: 80vh;
@@ -770,58 +706,71 @@
             box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
         }
 
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Choice Buttons Styles */
+        .btn-choice {
+            width: 100%;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            padding: 1.3rem;
+            text-transform: none;
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        
+        .btn-whatsapp { background-color: var(--btn-green); color: #fff; border: 1px solid rgba(37, 211, 102, 0.3); }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
         }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.9s ease-out;
+        .btn-email { background-color: var(--btn-blue); color: #fff; border: 1px solid rgba(0, 86, 179, 0.3); }
+        .btn-email:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.4);
         }
+
+        /* Confirmation Message Styles */
+        .confirmation-message { text-align: center; padding: 3rem 2rem; }
+        .confirmation-message i {
+            font-size: 4rem;
+            color: var(--gold-base);
+            margin-bottom: 1.5rem;
+            display: block;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .confirmation-message p {
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        @keyframes popIn { 0% { opacity: 0; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
+
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .section-header h2 { font-size: 2.2rem; }
-            .header { padding: 1rem; top: auto; }
-            .top-bar h2 { font-size: 0.7rem; }
-            .slide-menu { width: 280px; }
-            .glass-card { padding: 2rem; }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar with Branding (Updated SEO Heading) -->
     <div class="top-bar">
         <h2>Respisleep Care and Neuro EEG</h2>
     </div>
 
-    <!-- Header -->
     <header class="header">
-        <!-- Hamburger Menu (Left) -->
         <div class="hamburger" id="hamburgerBtn">
             <i class="fas fa-bars"></i>
         </div>
-
-        <!-- Logo Image (Right) -->
         <img src="https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd" alt="Respisleep Care and Neuro EEG Logo" class="logo-img" onclick="openLogoModal()" title="Click to view full logo">
     </header>
 
-    <!-- NEW: Menu Backdrop (Click Outside to Close) -->
     <div class="menu-backdrop" id="menuBackdrop"></div>
 
-    <!-- Slide-in Menu -->
     <nav class="slide-menu" id="slideMenu">
         <ul>
-            <!-- Smooth scroll enabled via CSS -->
             <li><a href="#home" class="menu-link">Home</a></li>
             <li><a href="#about" class="menu-link">About Us</a></li>
             <li><a href="#services" class="menu-link">Services</a></li>
@@ -830,16 +779,13 @@
         </ul>
     </nav>
 
-    <!-- Main Content Wrapper for Semantic HTML -->
     <main id="main-content">
-        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="golden-text">Advanced Sleep and Brain Diagnostics You Can Trust</h1>
-                <p>Experience the gold standard in medical accuracy. World-class PSG Sleep Studies, EEG Brain Mapping, and Respiratory Care.</p>
+                <h1 class="golden-text">Advanced Sleep Disorder and Brain Diagnostics You Can Trust</h1>
+                <p>Experience gold standard in medical accuracy. World-class PSG Sleep Studies, EEG Brain Mapping, and Respiratory Care.</p>
                 
                 <div class="btn-group">
-                    <!-- Smooth scroll enabled via CSS -->
                     <a href="#booking" class="btn btn-primary">
                         <i class="far fa-calendar-alt"></i> Book Appointment
                     </a>
@@ -856,29 +802,29 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about">
             <div class="section-header reveal">
                 <h2 class="golden-text">Who We Are</h2>
-                <p>Setting the standard in Respiratory and Neurological Care.</p>
+                <p>Setting standard in Respiratory and Neurological Care.</p>
             </div>
             
-            <div class="about-grid">
-                <!-- Logo displayed in About Section -->
-                <div class="about-logo-container reveal">
-                    <img src="https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd" alt="Clinic Logo" onclick="openLogoModal()" title="Click to view full logo">
-                </div>
-                
-                <div class="glass-card reveal">
-                    <h3 style="color: var(--gold-base); margin-bottom: 1rem; text-align:center; font-size: 1.4rem;">Our Expertise</h3>
-                    <p style="line-height: 1.9; color: #e0e0e0; font-size: 1.05rem;">
-                        With 25 years of experience in the medical field, I specialize in Neurophysiology and Pulmonary/Respiratory Care. All sleep study reports are reviewed by an experienced pulmonologist, and EEG reports are reviewed by a specialist neurophysician to ensure accurate and reliable results. We are committed to precise diagnostics and compassionate patient care.
+            <div class="about-grid reveal">
+                <!-- Text Content (Left) -->
+                <div class="about-content glass-card">
+                    <h3 style="color: var(--gold-base); margin-bottom: 1.5rem; text-align:left; font-size: 1.5rem;">Our Expertise</h3>
+                    <p style="line-height: 1.8; color: #e0e0e0; font-size: 1.1rem;">
+                        Wajid Khan is Founder of this diagnostic setup and has over 25 years of experience in the medical field. He specializes in Neurophysiology and Pulmonary/Respiratory Care. He is responsible for operating advanced diagnostic equipment, including Sleep Study (PSG) and EEG machines, ensuring accurate, safe, and reliable testing procedures. All sleep study reports are reviewed by an experienced pulmonologist, and all EEG reports are reviewed by a specialist neurophysician after tests are completed. The focus is on accurate diagnostics, patient comfort, and professional care.
                     </p>
+                </div>
+
+                <!-- Photo Content (Right) -->
+                <div class="about-logo-container reveal">
+                    <!-- NOTE: Replace the src below with your uploaded photo URL -->
+                    <img src="https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd" alt="Wajid Khan Founder" onclick="openLogoModal()" title="Click to view full photo">
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services">
             <div class="services-badge reveal">Home &amp; Clinic Services Available for PSG &amp; EEG</div>
             <div class="section-header reveal">
@@ -905,7 +851,7 @@
                 <div class="glass-card reveal">
                     <div class="service-icon-wrapper"><i class="fas fa-wind"></i></div>
                     <h3 class="golden-text" style="font-size: 1.4rem;">CPAP &amp; BiPAP</h3>
-                    <p>Effective sleep apnea management and titration studies with the latest equipment.</p>
+                    <p>Effective sleep apnea management and titration studies with latest equipment.</p>
                 </div>
                 <div class="glass-card reveal">
                     <div class="service-icon-wrapper"><i class="fas fa-fingerprint"></i></div>
@@ -915,7 +861,6 @@
             </div>
         </section>
 
-        <!-- Health Info Section -->
         <section id="health-info">
             <div class="section-header reveal">
                 <h2 class="golden-text">Health Insight</h2>
@@ -936,7 +881,6 @@
             </div>
         </section>
 
-        <!-- Why Choose Us -->
         <section id="why-us">
             <div class="section-header reveal">
                 <h2 class="golden-text">Why Choose Us</h2>
@@ -965,13 +909,12 @@
             </div>
         </section>
 
-        <!-- Booking Section -->
         <section id="booking">
             <div class="section-header reveal">
                 <h2 class="golden-text">Secure Your Appointment</h2>
                 <p>Schedule your consultation or diagnostic test today.</p>
             </div>
-            <div class="booking-container glass reveal">
+            <div class="booking-container glass reveal" id="bookingContainer">
                 <form id="bookingForm">
                     <div class="form-group">
                         <input type="text" id="name" class="form-control" placeholder="Full Name" required="">
@@ -998,12 +941,11 @@
                     <div class="form-group">
                         <textarea id="message" class="form-control" rows="4" placeholder="Additional Message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Proceed to Send Options</button>
                 </form>
             </div>
         </section>
 
-        <!-- Location & Contact Section -->
         <section id="contact">
             <div class="section-header reveal">
                 <h2 class="golden-text">Visit Us</h2>
@@ -1014,25 +956,21 @@
                     <h3 class="golden-text" style="margin-bottom: 1rem;">Future Medical Complex</h3>
                     <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">LG Avalon Plaza, Mall Road,<br>Saddar Cantt, Rawalpindi, 48000</p>
                     
-                    <!-- Google Maps Button -->
                     <div style="margin-top: 2rem;">
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=Future+Medical+Complex+LG+Avalon+Plaza+Mall+Road+Saddar+Cantt+Rawalpindi" target="_blank" class="btn btn-secondary" style="border-color: #fff; color: #fff; width: 100%; justify-content: center;">
                             <i class="fas fa-location-arrow"></i> Find Us on Google Maps
                         </a>
                     </div>
 
-                    <!-- Prominent Social Media Buttons (Below Address) -->
                     <div class="social-buttons-container">
                         <a href="https://www.instagram.com/respisleepcareneuro" target="_blank" class="social-btn instagram" title="Follow on Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <!-- FACEBOOK LINK -->
                         <a href="https://www.facebook.com/share/1GmLsF9XZX/" target="_blank" class="social-btn facebook" title="Like on Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
 
-                    <!-- Contact Details (Below Socials) -->
                     <div class="contact-details" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem;">
                         <a href="https://wa.me/923318921571" target="_blank" class="contact-link">
                             <i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i> 
@@ -1048,7 +986,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-links">
             <a href="#home">Home</a>
@@ -1057,27 +994,21 @@
             <a href="#contact">Contact</a>
         </div>
         <p style="margin-top: 2rem; color: #555; font-size: 0.8rem;">
-            © 2026 Respiration Care &amp; Neuro EEG. All Rights Reserved.
+            © 2023 Respiration Care &amp; Neuro EEG. All Rights Reserved.
         </p>
     </footer>
 
-    <!-- Booking Success Modal -->
-    <div class="modal-overlay" id="successModal">
+    <!-- Choice Modal -->
+    <div class="modal-overlay" id="choiceModal">
         <div class="modal-content">
-            <div style="font-size: 4rem; color: var(--gold-base); margin-bottom: 1rem;">
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <h3 style="color: #fff; margin-bottom: 0.5rem;">Request Received!</h3>
-            <p style="color: #ccc;">Thank you. Please choose a method below to confirm your details immediately with our team.</p>
-            
+            <h2 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.8rem;">Choose How You Want to Send Your Appointment Request</h2>
             <div class="modal-actions">
-                <a href="https://wa.me/923318921571?text=Hello%20RespiCare,%20I%20just%20submitted%20a%20booking%20request%20via%20website.%20Please%20confirm." target="_blank" class="btn btn-primary" style="justify-content: center;">
-                    <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
-                </a>
-                <a href="mailto:respisleepcare@gmail.com?subject=Appointment Booking – Respiration Care &amp; Neuro EEG" class="btn btn-secondary" style="justify-content: center;">
-                    <i class="fas fa-envelope"></i> Send Email
-                </a>
-                <button id="closeModal" class="btn" style="color: #666; margin-top: 0.5rem; font-size: 0.9rem;">Close</button>
+                <button onclick="sendWhatsApp()" class="btn btn-choice btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                </button>
+                <button onclick="sendEmail()" class="btn btn-choice btn-email">
+                    <i class="fas fa-envelope"></i> Send via Email
+                </button>
             </div>
         </div>
     </div>
@@ -1090,12 +1021,10 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
     <script>
-        // Elements
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const slideMenu = document.getElementById('slideMenu');
-        const menuBackdrop = document.getElementById('menuBackdrop'); // New: Backdrop element
+        const menuBackdrop = document.getElementById('menuBackdrop');
         const menuLinks = document.querySelectorAll('.menu-link');
         const body = document.body;
 
@@ -1103,39 +1032,27 @@
             const isOpen = slideMenu.classList.contains('active');
             
             slideMenu.classList.toggle('active');
-            menuBackdrop.classList.toggle('active'); // Toggle Backdrop
+            menuBackdrop.classList.toggle('active');
             
             if (!isOpen) {
-                // Opening
                 body.style.overflow = 'hidden';
                 hamburgerBtn.innerHTML = '<i class="fas fa-times"></i>';
             } else {
-                // Closing
                 body.style.overflow = 'auto';
                 hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
             }
         }
 
-        // Toggle on Hamburger Click
-        hamburgerBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent event bubbling to backdrop
-            toggleMenu();
-        });
-
-        // NEW: Close Menu when clicking outside (Backdrop Click)
+        hamburgerBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
         menuBackdrop.addEventListener('click', toggleMenu);
 
-        // Handle Navigation Links
         menuLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent clicking link from closing menu immediately
-                if(slideMenu.classList.contains('active')) {
-                    toggleMenu();
-                }
+                e.stopPropagation();
+                if(slideMenu.classList.contains('active')) { toggleMenu(); }
             });
         });
 
-        // Scroll Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
@@ -1144,25 +1061,64 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Booking Form Logic
         const bookingForm = document.getElementById('bookingForm');
-        const successModal = document.getElementById('successModal');
-        const closeModal = document.getElementById('closeModal');
+        const bookingContainer = document.getElementById('bookingContainer');
+        const choiceModal = document.getElementById('choiceModal');
         const logoModal = document.getElementById('logoModal');
 
         bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            successModal.classList.add('active');
+            choiceModal.classList.add('active');
             body.style.overflow = 'hidden';
-            bookingForm.reset();
         });
 
-        closeModal.addEventListener('click', () => {
-            successModal.classList.remove('active');
+        function getFormData() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const message = document.getElementById('message').value;
+            
+            return `Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Selected Service: ${service}
+Preferred Date: ${date}
+Message: ${message}`;
+        }
+
+        function sendWhatsApp() {
+            const data = getFormData();
+            const whatsappNumber = "923318921571";
+            const encodedText = encodeURIComponent(data);
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
+            finalizeBooking();
+        }
+
+        function sendEmail() {
+            const data = getFormData();
+            const to = "respisleepcare@gmail.com";
+            const subject = encodeURIComponent("Appointment Booking – Respiration Care & Neuro EEG");
+            const body = encodeURIComponent(data);
+            window.open(`mailto:${to}?subject=${subject}&body=${body}`, '_blank');
+            finalizeBooking();
+        }
+
+        function finalizeBooking() {
+            choiceModal.classList.remove('active');
             body.style.overflow = 'auto';
-        });
 
-        // Logo Modal Logic
+            bookingContainer.innerHTML = `
+                <div class="confirmation-message">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Your appointment request has been prepared successfully. Our team will contact you shortly.</p>
+                </div>
+            `;
+            bookingContainer.style.opacity = '0';
+            setTimeout(() => { bookingContainer.style.opacity = '1'; }, 50);
+        }
+
         function openLogoModal() {
             logoModal.classList.add('active');
             body.style.overflow = 'hidden';
@@ -1173,8 +1129,7 @@
             body.style.overflow = 'auto';
         }
 
-        // Close modals on outside click
-        [successModal, logoModal].forEach(modal => {
+        [choiceModal, logoModal].forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     modal.classList.remove('active');
@@ -1183,6 +1138,5 @@
             });
         });
     </script>
-
 
 </body></html>
