@@ -67,6 +67,7 @@
             --backdrop-bg: rgba(0, 5, 10, 0.85);
             --btn-green: #25D366;
             --btn-blue: #0078d7;
+            --btn-red: #FF0000; /* YouTube color */
         }
 
         * {
@@ -171,17 +172,48 @@
             height: 80px;
         }
 
-        .logo-img {
+        /* Header Layout: Hamburger | Socials | Logos */
+        .header-left { display: flex; align-items: center; }
+        .header-center { flex: 1; display: flex; justify-content: center; }
+        .header-right { display: flex; align-items: center; gap: 15px; }
+
+        .logo-img, .secp-logo-img {
             height: 55px;
             cursor: pointer;
             transition: transform 0.3s ease;
             filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
         }
 
-        .logo-img:hover {
+        .logo-img:hover, .secp-logo-img:hover {
             transform: scale(1.03);
             filter: drop-shadow(0 0 10px var(--gold-base));
         }
+
+        /* Top Socials in Header */
+        .top-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .top-social-btn {
+            color: #fff;
+            font-size: 1.4rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .top-social-btn:hover { transform: scale(1.1); }
+        .top-social-btn.instagram:hover { background: #E1306C; border-color: #E1306C; }
+        .top-social-btn.facebook:hover { background: #4267B2; border-color: #4267B2; }
+        .top-social-btn.youtube:hover { background: var(--btn-red); border-color: var(--btn-red); }
 
         .hamburger {
             cursor: pointer;
@@ -216,7 +248,8 @@
             z-index: 990;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.4s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
+            will-change: opacity;
         }
 
         .menu-backdrop.active { opacity: 1; pointer-events: auto; }
@@ -230,7 +263,8 @@
             background: linear-gradient(180deg, #0f2027, #000000);
             z-index: 1001;
             transform: translateX(-100%);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother easing */
+            will-change: transform;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -414,67 +448,67 @@
             letter-spacing: 0.3px;
         }
 
-        /* --- UPDATED ABOUT SECTION LAYOUT --- */
+        /* --- UPDATED ABOUT SECTION --- */
         .about-grid {
-            display: flex; /* Changed to Flexbox for layout control */
-            flex-direction: row; /* Default: Row */
+            display: flex;
+            flex-direction: row;
             gap: 3rem;
             max-width: 1000px;
             margin: 0 auto;
-            align-items: center; /* Vertical center */
-            justify-content: space-between; /* Push image to right */
+            align-items: center;
+            justify-content: space-between;
         }
 
         .about-content {
-            flex: 1; /* Take up available space */
+            flex: 1;
         }
 
-        .about-logo-container {
-            flex: 0 0 auto; /* Do not grow, keep natural size */
-            width: 45%; /* Proportion of space */
+        .about-photo-container {
+            flex: 0 0 auto;
+            width: 45%;
             text-align: center;
             margin-bottom: 2rem;
-            padding: 2rem;
-            background: rgba(255,255,255,0.03);
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-            /* Natural look */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* MANDATORY: Doctor Photo Styling */
+        .doctor-photo {
+            border-radius: 16px;
+            /* Soft medical shadow */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+            object-fit: cover;
+            vertical-align: middle;
+            /* Retain aspect ratio, max-width constraint handled by container */
+            max-width: 100%; 
+            height: auto;
+            /* Center visually */
+            display: block;
             transition: transform 0.3s ease;
         }
 
-        .about-logo-container img {
-            max-height: 140px; /* Slightly larger for desktop prominence */
-            cursor: pointer;
-            object-fit: contain;
-            /* Removed heavy filters per instructions */
-        }
-
-        .about-logo-container img:hover {
+        .doctor-photo:hover {
             transform: scale(1.02);
-            filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
 
-        /* Mobile Override for About Us */
         @media (max-width: 768px) {
-            .about-grid {
-                flex-direction: column; /* Stack on mobile: Text Top, Image Bottom */
-            }
-            .about-logo-container {
-                width: 100%; /* Full width image container */
-                margin-top: 2rem;
-            }
-            .about-logo-container img {
-                max-height: 200px; /* Bigger on mobile */
-            }
+            .about-grid { flex-direction: column; }
+            .about-photo-container { width: 100%; margin-top: 2rem; }
             .hero h1 { font-size: 2.5rem; }
             .section-header h2 { font-size: 2.2rem; }
-            .header { padding: 1rem; top: auto; }
+            .header { padding: 1rem; }
             .top-bar h2 { font-size: 0.7rem; }
             .slide-menu { width: 280px; }
             .glass-card { padding: 2rem; }
+            /* Adjust header for mobile */
+            .header-center { display: none; } /* Hide top socials on very small screens if crowded, or keep small */
+            .header-right { gap: 10px; }
+            .logo-img, .secp-logo-img { height: 40px; }
         }
 
-        /* --- END ABOUT SECTION LAYOUT --- */
+        /* --- END ABOUT SECTION --- */
 
         #services { text-align: center; } 
 
@@ -562,6 +596,15 @@
 
         .form-group { margin-bottom: 1.5rem; position: relative; }
 
+        /* Label for clarity */
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
         .form-control {
             width: 100%;
             padding: 1.2rem 1.5rem;
@@ -573,7 +616,11 @@
             outline: none;
             transition: all 0.3s;
             font-size: 1rem;
+            appearance: none; /* For select dropdown consistency */
         }
+        
+        /* Custom scroll for select if needed */
+        select.form-control { cursor: pointer; background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23D4AF37%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 0.65em auto; padding-right: 3rem; }
 
         .form-control:focus {
             border-color: var(--gold-base);
@@ -582,6 +629,8 @@
         }
         
         .form-control::placeholder { color: #888; }
+        
+        option { background: #0f2027; color: #fff; }
 
         .contact-wrapper { max-width: 800px; margin: 0 auto; text-align: center; }
 
@@ -653,6 +702,7 @@
 
         .social-btn.instagram { color: #E1306C; border-color: rgba(225, 48, 108, 0.5); }
         .social-btn.facebook { color: #4267B2; border-color: rgba(66, 103, 178, 0.5); }
+        .social-btn.youtube { color: #FF0000; border-color: rgba(255, 0, 0, 0.5); }
 
         .social-btn:hover {
             transform: scale(1.15);
@@ -662,6 +712,7 @@
         
         .social-btn.instagram:hover { background: #E1306C; color: #fff; box-shadow: 0 15px 30px rgba(225, 48, 108, 0.4); }
         .social-btn.facebook:hover { background: #4267B2; color: #fff; box-shadow: 0 15px 30px rgba(66, 103, 178, 0.4); }
+        .social-btn.youtube:hover { background: #FF0000; color: #fff; box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4); }
 
         .modal-overlay {
             position: fixed;
@@ -752,6 +803,21 @@
 
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        footer {
+            padding: 3rem 1rem;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+        }
+        
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover { color: var(--gold-base); }
     </style>
 </head>
 <body>
@@ -761,10 +827,33 @@
     </div>
 
     <header class="header">
-        <div class="hamburger" id="hamburgerBtn">
-            <i class="fas fa-bars"></i>
+        <!-- Left: Hamburger -->
+        <div class="header-left">
+            <div class="hamburger" id="hamburgerBtn">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <img src="https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd" alt="Respisleep Care and Neuro EEG Logo" class="logo-img" onclick="openLogoModal()" title="Click to view full logo">
+
+        <!-- Center: Social Media Buttons (Visible on top) -->
+        <div class="header-center">
+            <div class="top-socials">
+                <a href="https://www.instagram.com/respisleepcare?igsh=aG41YnBoNWV2eHl2" target="_blank" class="top-social-btn instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1GmLsF9XZX/" target="_blank" class="top-social-btn facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/@respisleepcare" target="_blank" class="top-social-btn youtube" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Right: Logo + SECP Logo -->
+        <div class="header-right">
+            <img src="https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd" alt="Respisleep Care Logo" class="logo-img" onclick="openLogoModal('https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd')" title="Click to view full logo">
+            <img src="https://z-cdn-media.chatglm.cn/files/7ed1f43f-c3ae-4df1-b4ed-ba1dade4415c.jpeg?auth_key=1867121879-cf76da4f9c5048f697e6fd59498cc552-0-09719593b87996fde0b265364514e0b3" alt="SECP Logo" class="secp-logo-img" onclick="openLogoModal('https://z-cdn-media.chatglm.cn/files/7ed1f43f-c3ae-4df1-b4ed-ba1dade4415c.jpeg?auth_key=1867121879-cf76da4f9c5048f697e6fd59498cc552-0-09719593b87996fde0b265364514e0b3')" title="Click to view SECP logo">
+        </div>
     </header>
 
     <div class="menu-backdrop" id="menuBackdrop"></div>
@@ -809,18 +898,17 @@
             </div>
             
             <div class="about-grid reveal">
-                <!-- Text Content (Left) -->
+                <!-- Text Content (Left) - Unchanged -->
                 <div class="about-content glass-card">
                     <h3 style="color: var(--gold-base); margin-bottom: 1.5rem; text-align:left; font-size: 1.5rem;">Our Expertise</h3>
                     <p style="line-height: 1.8; color: #e0e0e0; font-size: 1.1rem;">
-                        Wajid Khan is Founder of this diagnostic setup and has over 25 years of experience in the medical field. He specializes in Neurophysiology and Pulmonary/Respiratory Care. He is responsible for operating advanced diagnostic equipment, including Sleep Study (PSG) and EEG machines, ensuring accurate, safe, and reliable testing procedures. All sleep study reports are reviewed by an experienced pulmonologist, and all EEG reports are reviewed by a specialist neurophysician after tests are completed. The focus is on accurate diagnostics, patient comfort, and professional care.
+                        Wajid Khan is the Founder of this diagnostic setup and has over 25 years of experience in the medical field. He specializes in Neurophysiology and Pulmonary/Respiratory Care. He is responsible for operating advanced diagnostic equipment, including Sleep Study (PSG) and EEG machines, ensuring accurate, safe, and reliable testing procedures. All sleep study reports are reviewed by an experienced pulmonologist, and all EEG reports are reviewed by a specialist neurophysician after tests are completed. The focus is on accurate diagnostics, patient comfort, and professional care.
                     </p>
                 </div>
 
-                <!-- Photo Content (Right) -->
-                <div class="about-logo-container reveal">
-                    <!-- NOTE: Replace the src below with your uploaded photo URL -->
-                    <img src="https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd" alt="Wajid Khan Founder" onclick="openLogoModal()" title="Click to view full photo">
+                <!-- Photo Content (Right) - STRICTLY DOCTOR PORTRAIT -->
+                <div class="about-photo-container reveal">
+                    <img src="https://z-cdn-media.chatglm.cn/files/e9ec94aa-8a30-4319-ac55-0f5ef958bd62.jpeg?auth_key=1867121879-9844f6707c10413484600df724bc5813-0-3993264837267974ac8aeff3c39d332c" alt="Wajid Khan - Founder" class="doctor-photo">
                 </div>
             </div>
         </section>
@@ -925,6 +1013,43 @@
                     <div class="form-group">
                         <input type="tel" id="phone" class="form-control" placeholder="Phone / WhatsApp Number" required="">
                     </div>
+                    <!-- NEW: City Dropdown -->
+                    <div class="form-group">
+                        <select id="city" class="form-control" required="">
+                            <option value="" disabled="" selected="">Select Your City</option>
+                            <option value="Abbottabad">Abbottabad</option>
+                            <option value="Aripur">Aripur</option>
+                            <option value="Attock">Attock</option>
+                            <option value="Bahawalpur">Bahawalpur</option>
+                            <option value="Battagram">Battagram</option>
+                            <option value="Bisham">Bisham</option>
+                            <option value="Chakwal">Chakwal</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Gujar Khan">Gujar Khan</option>
+                            <option value="Gujranwala">Gujranwala</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Jhang">Jhang</option>
+                            <option value="Jhelum">Jhelum</option>
+                            <option value="Kamra">Kamra</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Kohat">Kohat</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Mansehra">Mansehra</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Nowshera">Nowshera</option>
+                            <option value="Peshawar">Peshawar</option>
+                            <option value="Quetta">Quetta</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                            <option value="Sawawa">Sawawa</option>
+                            <option value="Sargodha">Sargodha</option>
+                            <option value="Sialkot">Sialkot</option>
+                            <option value="Sukkur">Sukkur</option>
+                            <option value="Taxila">Taxila</option>
+                            <option value="Wah">Wah</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
                     <div class="form-group">
                         <select id="service" class="form-control" required="">
                             <option value="" disabled="" selected="">Select Service</option>
@@ -936,6 +1061,7 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <label for="date" class="form-label">Select the date you want your appointment</label>
                         <input type="date" id="date" class="form-control" required="">
                     </div>
                     <div class="form-group">
@@ -962,12 +1088,16 @@
                         </a>
                     </div>
 
+                    <!-- Updated Socials with YouTube and corrected Instagram -->
                     <div class="social-buttons-container">
-                        <a href="https://www.instagram.com/respisleepcareneuro" target="_blank" class="social-btn instagram" title="Follow on Instagram">
+                        <a href="https://www.instagram.com/respisleepcare?igsh=aG41YnBoNWV2eHl2" target="_blank" class="social-btn instagram" title="Follow on Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="https://www.facebook.com/share/1GmLsF9XZX/" target="_blank" class="social-btn facebook" title="Like on Facebook">
                             <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@respisleepcare" target="_blank" class="social-btn youtube" title="Subscribe on YouTube">
+                            <i class="fab fa-youtube"></i>
                         </a>
                     </div>
 
@@ -994,7 +1124,7 @@
             <a href="#contact">Contact</a>
         </div>
         <p style="margin-top: 2rem; color: #555; font-size: 0.8rem;">
-            © 2023 Respiration Care &amp; Neuro EEG. All Rights Reserved.
+            © 2026 Respiration Care &amp; Neuro EEG. All Rights Reserved.
         </p>
     </footer>
 
@@ -1013,10 +1143,10 @@
         </div>
     </div>
 
-    <!-- Logo Modal (Lightbox) -->
+    <!-- Logo Modal (Lightbox) - Dynamic Image Source -->
     <div class="modal-overlay" id="logoModal">
         <div class="modal-content logo-modal-content">
-            <img src="https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd" alt="Respisleep Care and Neuro EEG Logo Full Size">
+            <img id="modalLogoImage" src="" alt="Full Size Logo">
             <button onclick="closeLogoModal()" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer;"><i class="fas fa-times"></i></button>
         </div>
     </div>
@@ -1028,13 +1158,18 @@
         const menuLinks = document.querySelectorAll('.menu-link');
         const body = document.body;
 
+        // Optimized toggle for smoother animation
+        let isMenuOpen = false;
+
         function toggleMenu() {
-            const isOpen = slideMenu.classList.contains('active');
+            isMenuOpen = !isMenuOpen;
             
+            // Toggle classes
             slideMenu.classList.toggle('active');
             menuBackdrop.classList.toggle('active');
             
-            if (!isOpen) {
+            // UI Updates
+            if (isMenuOpen) {
                 body.style.overflow = 'hidden';
                 hamburgerBtn.innerHTML = '<i class="fas fa-times"></i>';
             } else {
@@ -1044,12 +1179,12 @@
         }
 
         hamburgerBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
-        menuBackdrop.addEventListener('click', toggleMenu);
+        menuBackdrop.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
 
         menuLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.stopPropagation();
-                if(slideMenu.classList.contains('active')) { toggleMenu(); }
+                if(isMenuOpen) { toggleMenu(); }
             });
         });
 
@@ -1065,6 +1200,7 @@
         const bookingContainer = document.getElementById('bookingContainer');
         const choiceModal = document.getElementById('choiceModal');
         const logoModal = document.getElementById('logoModal');
+        const modalLogoImage = document.getElementById('modalLogoImage');
 
         bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1076,6 +1212,7 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
+            const city = document.getElementById('city').value; // Added city
             const service = document.getElementById('service').value;
             const date = document.getElementById('date').value;
             const message = document.getElementById('message').value;
@@ -1083,6 +1220,7 @@
             return `Name: ${name}
 Email: ${email}
 Phone: ${phone}
+City: ${city}
 Selected Service: ${service}
 Preferred Date: ${date}
 Message: ${message}`;
@@ -1119,7 +1257,8 @@ Message: ${message}`;
             setTimeout(() => { bookingContainer.style.opacity = '1'; }, 50);
         }
 
-        function openLogoModal() {
+        function openLogoModal(imgSrc) {
+            modalLogoImage.src = imgSrc;
             logoModal.classList.add('active');
             body.style.overflow = 'hidden';
         }
