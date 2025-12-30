@@ -14,7 +14,6 @@
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Medical Schema -->
     <script type="application/ld+json">
     {
@@ -50,7 +49,6 @@
       "description": "Advanced Sleep & Brain Diagnostics in Rawalpindi. Specialized in PSG Sleep Study, Digital EEG Brain Mapping, Spirometry, and CPAP/BiPAP Therapy. Home & Clinic Services available."
     }
     </script>
-
     <style>
         :root {
             --bg-dark: #050a14;
@@ -69,31 +67,27 @@
             --btn-blue: #0078d7;
             --btn-red: #FF0000; /* YouTube color */
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth; 
+            scroll-behavior: smooth;
         }
-
         html {
             scroll-padding-top: 0;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             color: #e0e0e0;
             background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 40%), 
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
                 radial-gradient(circle at 90% 80%, rgba(0, 50, 80, 0.15) 0%, transparent 40%),
                 linear-gradient(to bottom right, #020c1b, #0a192f, #112240);
             background-attachment: fixed;
             overflow-x: hidden;
             line-height: 1.6;
         }
-
         .top-bar {
             background: var(--gold-gradient);
             background-size: 200% auto;
@@ -105,7 +99,6 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             border-bottom: 1px solid rgba(0,0,0,0.2);
         }
-
         .top-bar h2 {
             color: #1a1a1a;
             font-family: 'Cinzel', serif;
@@ -116,12 +109,10 @@
             margin: 0;
             line-height: normal;
         }
-
         h1, h2, h3, h4 {
             font-family: 'Cinzel', serif;
             letter-spacing: 0.5px;
         }
-
         .golden-text {
             background: var(--gold-gradient);
             background-size: 200% auto;
@@ -132,9 +123,7 @@
             position: relative;
             display: inline-block;
         }
-
         @keyframes shine { to { background-position: 200% center; } }
-
         .glass-card {
             background: var(--glass-bg);
             backdrop-filter: blur(14px);
@@ -147,14 +136,12 @@
             overflow: hidden;
             box-shadow: var(--glass-shadow);
         }
-
         .glass-card:hover {
             border-color: rgba(212, 175, 55, 0.6);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             transform: translateY(-5px);
             background: rgba(255, 255, 255, 0.06);
         }
-
         .header {
             position: relative;
             top: auto;
@@ -163,7 +150,7 @@
             z-index: 20;
             padding: 1rem 2rem;
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-between;
             align-items: center;
             background: rgba(10, 20, 35, 0.85);
             backdrop-filter: blur(20px);
@@ -171,30 +158,25 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             height: 80px;
         }
-
         /* Header Layout: Hamburger | Socials | Logos */
         .header-left { display: flex; align-items: center; }
         .header-center { flex: 1; display: flex; justify-content: center; }
         .header-right { display: flex; align-items: center; gap: 15px; }
-
         .logo-img, .secp-logo-img {
             height: 55px;
             cursor: pointer;
             transition: transform 0.3s ease;
             filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
         }
-
         .logo-img:hover, .secp-logo-img:hover {
             transform: scale(1.03);
             filter: drop-shadow(0 0 10px var(--gold-base));
         }
-
         /* Top Socials in Header */
         .top-socials {
             display: flex;
             gap: 12px;
         }
-
         .top-social-btn {
             color: #fff;
             font-size: 1.4rem;
@@ -214,7 +196,6 @@
         .top-social-btn.instagram:hover { background: #E1306C; border-color: #E1306C; }
         .top-social-btn.facebook:hover { background: #4267B2; border-color: #4267B2; }
         .top-social-btn.youtube:hover { background: var(--btn-red); border-color: var(--btn-red); }
-
         .hamburger {
             cursor: pointer;
             font-size: 1.5rem;
@@ -237,7 +218,6 @@
             color: var(--gold-base);
             box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
         }
-
         .menu-backdrop {
             position: fixed;
             inset: 0;
@@ -251,9 +231,7 @@
             transition: opacity 0.3s ease-in-out;
             will-change: opacity;
         }
-
         .menu-backdrop.active { opacity: 1; pointer-events: auto; }
-
         .slide-menu {
             position: fixed;
             top: 0;
@@ -271,21 +249,17 @@
             border-right: 1px solid rgba(212, 175, 55, 0.3);
             box-shadow: 5px 0 30px rgba(0,0,0,0.5);
         }
-
         .slide-menu.active { transform: translateX(0); }
-
         .slide-menu ul {
             list-style: none;
             padding: 0 2.5rem;
         }
-
         .slide-menu li {
             margin: 2rem 0;
             text-align: left;
             border-bottom: 1px solid rgba(255,255,255,0.05);
             padding-bottom: 1rem;
         }
-
         .slide-menu a {
             text-decoration: none;
             color: #fff;
@@ -295,13 +269,11 @@
             display: block;
             opacity: 0.8;
         }
-
         .slide-menu a:hover {
             color: var(--gold-base);
             padding-left: 10px;
             opacity: 1;
         }
-
         .hero {
             min-height: 100vh;
             display: flex;
@@ -312,9 +284,7 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero-content { max-width: 900px; z-index: 2; }
-
         .hero h1 {
             font-size: 4rem;
             line-height: 1.1;
@@ -322,7 +292,6 @@
             animation: fadeInDown 1.2s ease-out;
             text-transform: uppercase;
         }
-
         .hero p {
             font-size: 1.4rem;
             margin-bottom: 3rem;
@@ -334,7 +303,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .btn-group {
             display: flex;
             gap: 2rem;
@@ -342,7 +310,6 @@
             flex-wrap: wrap;
             animation: fadeInUp 1.2s ease-out 0.6s backwards;
         }
-
         .btn {
             padding: 1.2rem 3rem;
             border-radius: 50px;
@@ -358,7 +325,6 @@
             border: none;
             cursor: pointer;
         }
-
         .btn-primary {
             background: var(--gold-gradient);
             background-size: 200% auto;
@@ -366,28 +332,24 @@
             box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
             border: 1px solid rgba(255,255,255,0.4);
         }
-
         .btn-primary:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
             background-position: right center;
             color: #000;
         }
-
         .btn-secondary {
             background: rgba(255,255,255,0.05);
             border: 1px solid var(--gold-base);
             color: #fff;
             backdrop-filter: blur(5px);
         }
-
         .btn-secondary:hover {
             background: rgba(212, 175, 55, 0.15);
             color: #fff;
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
             transform: translateY(-2px);
         }
-
         .trust-indicators {
             display: flex;
             justify-content: center;
@@ -396,7 +358,6 @@
             flex-wrap: wrap;
             animation: fadeInUp 1.2s ease-out 0.9s backwards;
         }
-
         .trust-item {
             display: flex;
             align-items: center;
@@ -412,14 +373,11 @@
         }
         
         .trust-item i { color: var(--gold-base); font-size: 1rem; }
-
         section { padding: 7rem 2rem; position: relative; }
-
         .section-header {
             text-align: center;
             margin-bottom: 5rem;
         }
-
         .section-header h2 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
@@ -439,7 +397,6 @@
             transform: translateX(-50%);
             border-radius: 2px;
         }
-
         .section-header p {
             color: #bbb;
             font-size: 1.1rem;
@@ -447,7 +404,6 @@
             font-weight: 300;
             letter-spacing: 0.3px;
         }
-
         /* --- UPDATED ABOUT SECTION --- */
         .about-grid {
             display: flex;
@@ -458,11 +414,9 @@
             align-items: center;
             justify-content: space-between;
         }
-
         .about-content {
             flex: 1;
         }
-
         .about-photo-container {
             flex: 0 0 auto;
             width: 45%;
@@ -472,27 +426,24 @@
             justify-content: center;
             align-items: center;
         }
-
         /* MANDATORY: Doctor Photo Styling */
         .doctor-photo {
             border-radius: 16px;
             /* Soft medical shadow */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
             object-fit: cover;
             vertical-align: middle;
             /* Retain aspect ratio, max-width constraint handled by container */
-            max-width: 100%; 
+            max-width: 100%;
             height: auto;
             /* Center visually */
             display: block;
             transition: transform 0.3s ease;
         }
-
         .doctor-photo:hover {
             transform: scale(1.02);
             box-shadow: 0 25px 50px rgba(0,0,0,0.5);
         }
-
         @media (max-width: 768px) {
             .about-grid { flex-direction: column; }
             .about-photo-container { width: 100%; margin-top: 2rem; }
@@ -503,15 +454,15 @@
             .slide-menu { width: 280px; }
             .glass-card { padding: 2rem; }
             /* Adjust header for mobile */
-            .header-center { display: none; } /* Hide top socials on very small screens if crowded, or keep small */
             .header-right { gap: 10px; }
             .logo-img, .secp-logo-img { height: 40px; }
+            /* Adjust top socials for mobile visibility */
+            .top-socials { gap: 8px; }
+            .top-social-btn { font-size: 1.2rem; width: 30px; height: 30px; }
+            .header { padding: 0.5rem 1rem; height: 70px; justify-content: space-around; }
         }
-
         /* --- END ABOUT SECTION --- */
-
-        #services { text-align: center; } 
-
+        #services { text-align: center; }
         .services-badge {
             display: inline-block;
             background: rgba(0,0,0,0.5);
@@ -519,14 +470,13 @@
             color: var(--gold-base);
             padding: 0.6rem 2rem;
             border-radius: 50px;
-            margin: 0 auto 3rem auto; 
+            margin: 0 auto 3rem auto;
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
             font-size: 0.85rem;
         }
-
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -534,7 +484,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .service-icon-wrapper {
             width: 65px;
             height: 65px;
@@ -553,7 +502,6 @@
         }
         
         .service-icon-wrapper i { color: var(--gold-base); }
-
         .health-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -561,13 +509,11 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .issue-card { border-left: 3px solid #e74c3c; }
         .issue-card h3 { color: #e74c3c; margin-bottom: 1rem; font-size: 1.4rem; }
         
         .solution-card { border-left: 3px solid var(--gold-base); }
         .solution-card h3 { color: var(--gold-base); margin-bottom: 1rem; font-size: 1.4rem; }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -586,16 +532,13 @@
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 0 8px rgba(212,175,55,0.4));
         }
-
         .booking-container {
             max-width: 600px;
             margin: 0 auto;
             border-top: 2px solid var(--gold-base);
             padding-top: 2rem;
         }
-
         .form-group { margin-bottom: 1.5rem; position: relative; }
-
         /* Label for clarity */
         .form-label {
             display: block;
@@ -604,7 +547,6 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
-
         .form-control {
             width: 100%;
             padding: 1.2rem 1.5rem;
@@ -621,7 +563,6 @@
         
         /* Custom scroll for select if needed */
         select.form-control { cursor: pointer; background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23D4AF37%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 0.65em auto; padding-right: 3rem; }
-
         .form-control:focus {
             border-color: var(--gold-base);
             background: rgba(0, 0, 0, 0.6);
@@ -631,9 +572,7 @@
         .form-control::placeholder { color: #888; }
         
         option { background: #0f2027; color: #fff; }
-
         .contact-wrapper { max-width: 800px; margin: 0 auto; text-align: center; }
-
         .address-box {
             background: rgba(255,255,255,0.03);
             padding: 4rem 3rem;
@@ -642,7 +581,6 @@
             position: relative;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
-
         .address-box::before {
             content: '';
             position: absolute;
@@ -655,7 +593,6 @@
             mask-composite: exclude;
             pointer-events: none;
         }
-
         .contact-link {
             color: #fff;
             text-decoration: none;
@@ -677,14 +614,12 @@
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
             transform: translateY(-2px);
         }
-
         .social-buttons-container {
             margin-top: 3rem;
             display: flex;
             justify-content: center;
             gap: 2rem;
         }
-
         .social-btn {
             width: 65px;
             height: 65px;
@@ -699,11 +634,9 @@
             background: rgba(0,0,0,0.4);
             border: 2px solid rgba(255,255,255,0.15);
         }
-
         .social-btn.instagram { color: #E1306C; border-color: rgba(225, 48, 108, 0.5); }
         .social-btn.facebook { color: #4267B2; border-color: rgba(66, 103, 178, 0.5); }
         .social-btn.youtube { color: #FF0000; border-color: rgba(255, 0, 0, 0.5); }
-
         .social-btn:hover {
             transform: scale(1.15);
             box-shadow: 0 15px 30px rgba(0,0,0,0.5);
@@ -713,7 +646,6 @@
         .social-btn.instagram:hover { background: #E1306C; color: #fff; box-shadow: 0 15px 30px rgba(225, 48, 108, 0.4); }
         .social-btn.facebook:hover { background: #4267B2; color: #fff; box-shadow: 0 15px 30px rgba(66, 103, 178, 0.4); }
         .social-btn.youtube:hover { background: #FF0000; color: #fff; box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4); }
-
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -730,9 +662,7 @@
             transition: opacity 0.3s ease;
             backdrop-filter: blur(8px);
         }
-
         .modal-overlay.active { opacity: 1; pointer-events: all; }
-
         .modal-content {
             background: linear-gradient(135deg, #0f2027, #000);
             padding: 3rem;
@@ -745,7 +675,6 @@
             transform: scale(0.95);
             transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-
         .modal-overlay.active .modal-content { transform: scale(1); }
         .modal-actions { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2.5rem; }
         
@@ -756,7 +685,6 @@
             border-radius: 10px;
             box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
         }
-
         /* Choice Buttons Styles */
         .btn-choice {
             width: 100%;
@@ -772,14 +700,12 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
         }
-
         .btn-email { background-color: var(--btn-blue); color: #fff; border: 1px solid rgba(0, 86, 179, 0.3); }
         .btn-email:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 86, 179, 0.4);
         }
-
         /* Confirmation Message Styles */
         .confirmation-message { text-align: center; padding: 3rem 2rem; }
         .confirmation-message i {
@@ -795,12 +721,9 @@
             margin: 0;
             line-height: 1.6;
         }
-
         @keyframes popIn { 0% { opacity: 0; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
-
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
@@ -821,11 +744,9 @@
     </style>
 </head>
 <body>
-
     <div class="top-bar">
         <h2>Respisleep Care and Neuro EEG</h2>
     </div>
-
     <header class="header">
         <!-- Left: Hamburger -->
         <div class="header-left">
@@ -833,7 +754,6 @@
                 <i class="fas fa-bars"></i>
             </div>
         </div>
-
         <!-- Center: Social Media Buttons (Visible on top) -->
         <div class="header-center">
             <div class="top-socials">
@@ -848,16 +768,13 @@
                 </a>
             </div>
         </div>
-
         <!-- Right: Logo + SECP Logo -->
         <div class="header-right">
             <img src="https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd" alt="Respisleep Care Logo" class="logo-img" onclick="openLogoModal('https://z-cdn-media.chatglm.cn/files/2d9123b6-3e33-46fc-b7c9-b98ab3393919.png?auth_key=1866772845-d6fdc3bc0b92473a80920d6f9f17c67d-0-bae34d62ec09e5d4d965c807e468ebfd')" title="Click to view full logo">
             <img src="https://z-cdn-media.chatglm.cn/files/7ed1f43f-c3ae-4df1-b4ed-ba1dade4415c.jpeg?auth_key=1867121879-cf76da4f9c5048f697e6fd59498cc552-0-09719593b87996fde0b265364514e0b3" alt="SECP Logo" class="secp-logo-img" onclick="openLogoModal('https://z-cdn-media.chatglm.cn/files/7ed1f43f-c3ae-4df1-b4ed-ba1dade4415c.jpeg?auth_key=1867121879-cf76da4f9c5048f697e6fd59498cc552-0-09719593b87996fde0b265364514e0b3')" title="Click to view SECP logo">
         </div>
     </header>
-
     <div class="menu-backdrop" id="menuBackdrop"></div>
-
     <nav class="slide-menu" id="slideMenu">
         <ul>
             <li><a href="#home" class="menu-link">Home</a></li>
@@ -867,7 +784,6 @@
             <li><a href="#contact" class="menu-link">Contact</a></li>
         </ul>
     </nav>
-
     <main id="main-content">
         <section id="home" class="hero">
             <div class="hero-content">
@@ -882,7 +798,6 @@
                         <i class="fab fa-whatsapp"></i> WhatsApp Us
                     </a>
                 </div>
-
                 <div class="trust-indicators">
                     <div class="trust-item"><i class="fas fa-clock"></i> 24/7 Service</div>
                     <div class="trust-item"><i class="fas fa-home"></i> Home Diagnostics</div>
@@ -890,7 +805,6 @@
                 </div>
             </div>
         </section>
-
         <section id="about">
             <div class="section-header reveal">
                 <h2 class="golden-text">Who We Are</h2>
@@ -905,21 +819,18 @@
                         Wajid Khan is the Founder of this diagnostic setup and has over 25 years of experience in the medical field. He specializes in Neurophysiology and Pulmonary/Respiratory Care. He is responsible for operating advanced diagnostic equipment, including Sleep Study (PSG) and EEG machines, ensuring accurate, safe, and reliable testing procedures. All sleep study reports are reviewed by an experienced pulmonologist, and all EEG reports are reviewed by a specialist neurophysician after tests are completed. The focus is on accurate diagnostics, patient comfort, and professional care.
                     </p>
                 </div>
-
                 <!-- Photo Content (Right) - STRICTLY DOCTOR PORTRAIT -->
                 <div class="about-photo-container reveal">
                     <img src="https://z-cdn-media.chatglm.cn/files/e9ec94aa-8a30-4319-ac55-0f5ef958bd62.jpeg?auth_key=1867121879-9844f6707c10413484600df724bc5813-0-3993264837267974ac8aeff3c39d332c" alt="Wajid Khan - Founder" class="doctor-photo">
                 </div>
             </div>
         </section>
-
         <section id="services">
             <div class="services-badge reveal">Home &amp; Clinic Services Available for PSG &amp; EEG</div>
             <div class="section-header reveal">
                 <h2 class="golden-text">Our Premium Services</h2>
                 <p>Comprehensive solutions for Sleep and Neurological health.</p>
             </div>
-
             <div class="service-grid">
                 <div class="glass-card reveal">
                     <div class="service-icon-wrapper"><i class="fas fa-bed"></i></div>
@@ -948,7 +859,6 @@
                 </div>
             </div>
         </section>
-
         <section id="health-info">
             <div class="section-header reveal">
                 <h2 class="golden-text">Health Insight</h2>
@@ -968,7 +878,6 @@
                 </div>
             </div>
         </section>
-
         <section id="why-us">
             <div class="section-header reveal">
                 <h2 class="golden-text">Why Choose Us</h2>
@@ -996,7 +905,6 @@
                 </div>
             </div>
         </section>
-
         <section id="booking">
             <div class="section-header reveal">
                 <h2 class="golden-text">Secure Your Appointment</h2>
@@ -1071,7 +979,6 @@
                 </form>
             </div>
         </section>
-
         <section id="contact">
             <div class="section-header reveal">
                 <h2 class="golden-text">Visit Us</h2>
@@ -1087,7 +994,6 @@
                             <i class="fas fa-location-arrow"></i> Find Us on Google Maps
                         </a>
                     </div>
-
                     <!-- Updated Socials with YouTube and corrected Instagram -->
                     <div class="social-buttons-container">
                         <a href="https://www.instagram.com/respisleepcare?igsh=aG41YnBoNWV2eHl2" target="_blank" class="social-btn instagram" title="Follow on Instagram">
@@ -1100,14 +1006,13 @@
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
-
                     <div class="contact-details" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem;">
                         <a href="https://wa.me/923318921571" target="_blank" class="contact-link">
-                            <i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i> 
+                            <i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i>
                             <span>0331-8921571</span>
                         </a>
                         <a href="mailto:respisleepcare@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope" style="color: var(--gold-base); font-size: 1.5rem;"></i> 
+                            <i class="fas fa-envelope" style="color: var(--gold-base); font-size: 1.5rem;"></i>
                             <span>respisleepcare@gmail.com</span>
                         </a>
                     </div>
@@ -1115,7 +1020,6 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-links">
             <a href="#home">Home</a>
@@ -1127,7 +1031,6 @@
             © 2026 Respiration Care &amp; Neuro EEG. All Rights Reserved.
         </p>
     </footer>
-
     <!-- Choice Modal -->
     <div class="modal-overlay" id="choiceModal">
         <div class="modal-content">
@@ -1142,7 +1045,6 @@
             </div>
         </div>
     </div>
-
     <!-- Logo Modal (Lightbox) - Dynamic Image Source -->
     <div class="modal-overlay" id="logoModal">
         <div class="modal-content logo-modal-content">
@@ -1150,17 +1052,14 @@
             <button onclick="closeLogoModal()" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer;"><i class="fas fa-times"></i></button>
         </div>
     </div>
-
     <script>
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const slideMenu = document.getElementById('slideMenu');
         const menuBackdrop = document.getElementById('menuBackdrop');
         const menuLinks = document.querySelectorAll('.menu-link');
         const body = document.body;
-
         // Optimized toggle for smoother animation
         let isMenuOpen = false;
-
         function toggleMenu() {
             isMenuOpen = !isMenuOpen;
             
@@ -1177,37 +1076,30 @@
                 hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
             }
         }
-
         hamburgerBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
         menuBackdrop.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
-
         menuLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.stopPropagation();
                 if(isMenuOpen) { toggleMenu(); }
             });
         });
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.15 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
         const bookingForm = document.getElementById('bookingForm');
         const bookingContainer = document.getElementById('bookingContainer');
         const choiceModal = document.getElementById('choiceModal');
         const logoModal = document.getElementById('logoModal');
         const modalLogoImage = document.getElementById('modalLogoImage');
-
         bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
             choiceModal.classList.add('active');
             body.style.overflow = 'hidden';
         });
-
         function getFormData() {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -1225,7 +1117,6 @@ Selected Service: ${service}
 Preferred Date: ${date}
 Message: ${message}`;
         }
-
         function sendWhatsApp() {
             const data = getFormData();
             const whatsappNumber = "923318921571";
@@ -1233,7 +1124,6 @@ Message: ${message}`;
             window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
             finalizeBooking();
         }
-
         function sendEmail() {
             const data = getFormData();
             const to = "respisleepcare@gmail.com";
@@ -1242,11 +1132,9 @@ Message: ${message}`;
             window.open(`mailto:${to}?subject=${subject}&body=${body}`, '_blank');
             finalizeBooking();
         }
-
         function finalizeBooking() {
             choiceModal.classList.remove('active');
             body.style.overflow = 'auto';
-
             bookingContainer.innerHTML = `
                 <div class="confirmation-message">
                     <i class="fas fa-check-circle"></i>
@@ -1256,18 +1144,15 @@ Message: ${message}`;
             bookingContainer.style.opacity = '0';
             setTimeout(() => { bookingContainer.style.opacity = '1'; }, 50);
         }
-
         function openLogoModal(imgSrc) {
             modalLogoImage.src = imgSrc;
             logoModal.classList.add('active');
             body.style.overflow = 'hidden';
         }
-
         function closeLogoModal() {
             logoModal.classList.remove('active');
             body.style.overflow = 'auto';
         }
-
         [choiceModal, logoModal].forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
@@ -1277,5 +1162,4 @@ Message: ${message}`;
             });
         });
     </script>
-
 </body></html>
